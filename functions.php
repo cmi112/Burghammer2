@@ -11,15 +11,6 @@
  * 
  */
 
-//  Stylesheet and Scripts Register Start
-function load_bootstrap(){
-    wp_enqueue_style('bootstrap-css',get_template_directory_uri()."/css/bootstrap.min.css" ,array(), '5.1.0', 'all');
-
-    wp_register_script('bootstrap',get_template_directory_uri().'/js/bootstrap.min.js','jquery',false,true);
-    wp_enqueue_script( 'bootstrap');
-
-}
-add_action('wp_enqueue_scripts','load_bootstrap');
 
 
 // Nav walker Register
@@ -39,5 +30,15 @@ register_nav_menus( array(
 ) );
 
 //  Navbar Register End
+
+
+
+// Excerpt Length content-Control start
+function set_excerpt_length(){
+    return 10;
+
+}
+add_filter('excerpt_length','set_excerpt_length');
+// Excerpt Length content-Control End
 
 ?>
