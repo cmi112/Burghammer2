@@ -8,3 +8,8 @@ Version: 1.0.0
 li{
     list-style: none;
 }
+footer{
+    height:100px;
+    width:100%;
+    background-color:rgba(153, 160, 153, 0.44);
+}
