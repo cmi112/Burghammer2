@@ -3,7 +3,7 @@
 /**
  * Header Template.
  * 
- * @package Burghammer
+ * @package Burghammer2
  */
 
 ;?>

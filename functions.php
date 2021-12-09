@@ -11,6 +11,14 @@
  * 
  */
 
+function wpb_adding_scripts() {
+    wp_enqueue_script('mixitup-min-js', get_template_directory_uri() . './mixitup.min.js');
+ 
+     
+    wp_enqueue_script('mixitup-min-js');
+    }
+      
+    add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
 
 
 // Nav walker Register
@@ -31,6 +39,101 @@ register_nav_menus( array(
 
 //  Navbar Register End
 
+
+
+// Thumbnail for Projects Start
+
+function custom_theme_feature(){
+    add_theme_support('post-thumbnails');
+
+    // Featured Image  theme set up
+
+     set_post_thumbnail_size( 50, 50);
+    // Image size for single posts
+     add_image_size( 'project-thumbnail', 300, 200 );
+
+}
+add_action('after_setup_theme','custom_theme_feature');
+
+// Thumbnail for Projects End
+
+
+
+// Custom Post Type start
+function wporg_custom_post_type() {
+
+    register_post_type('projects',
+
+    array(
+        'labels'      => array(
+            'name'          => __('Projects'),
+            'singular_name' => __('Project'),
+        ),
+        
+        'public'      => true,
+        'has_archive' => true,
+        'menu_icon' =>'dashicons-grid-view',
+        'supports' => array('title','editor','excerpt','thumbnail','revisions')
+       
+          
+    )
+    
+);
+
+// categories
+register_taxonomy(
+    'project_categories',
+    'projects',
+    array(
+      'label'        => __( 'Categories' ),
+      'rewrite'      => false,
+      'hierarchical' => true,
+      'capabilities' => array( 'edit_terms' => 'manage_categories' ),
+      'all_items'=>'Categories',
+      'query_var'=>true,
+      'rewrite'=>array('slug'=>'project_categories')
+    )
+  );
+  
+  // tags
+  register_taxonomy(
+    'project_tags',
+    'projects',
+    array(
+      'label'        => __( 'Tags' ),
+      'rewrite'      => false,
+      'hierarchical' => false,
+      'capabilities' => array( 'edit_terms' => 'manage_categories' )
+    )
+  );
+
+
+
+
+
+
+}
+add_action('init', 'wporg_custom_post_type');
+
+
+
+
+
+
+// Custom Post Type End
+
+
+
+
+// add_filter('show_admin_bar','__return_false');   /* when you are hiden the admin bar */
+
+// show admin bar in front end
+function admin_bar(){
+    if(is_user_logged_in()){
+      add_filter( 'show_admin_bar', '__return_true' , 1000 );
+    }
+  }
+  add_action('init', 'admin_bar' );
 
 
 // Excerpt Length content-Control start

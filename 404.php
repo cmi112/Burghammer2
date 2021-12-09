@@ -2,9 +2,9 @@
 /**
  * The template for displaying 404 pages (Not Found)
  *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @package Burghammer2
+
+ * @since Burghammer 1.0.0
  */
 
 get_header(); ?>

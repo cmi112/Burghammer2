@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Single Page.
+ * 
+ * @package Burghammer2
+ */
+ get_header(); 
+ ?>
 	
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
