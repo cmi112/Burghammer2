@@ -12,6 +12,9 @@
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<h2><?php the_title(); ?></h2>
+
+
+			
 			<p>Single Page Default</p>
 			<?php the_content();?>
 			

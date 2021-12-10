@@ -10,8 +10,6 @@
  */
 get_header();
 ;?>
-
-<h1>This is Index page</h1>
 <div class="container">
 
 

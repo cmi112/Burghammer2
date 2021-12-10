@@ -1,10 +1,10 @@
+@charset "UTF-8";
 /*
-Theme Name:Burghammer 
+Theme Name:Burghammer
 Author: Abdilkani @endcore gmbH
-Description: Burghammer Theme 
+Description: Burghammer Theme
 Version: 1.0.0
 */
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -69,18 +69,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1.5rem;
+  gap: 20px;
 }
 
 .right-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-
+  margin: 30px;
 }
 
 .right-content .fas {
-  width: 3rem;
-  height: 2rem;
+  font-size: 3rem;
   color: white;
   text-align: center;
   margin: 20px;
@@ -229,6 +232,10 @@ body {
   margin-top: 20px;
 }
 
+#mix-wrapper {
+  width: 100%;
+}
+
 /* MEDIA QUERIES STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media only screen and (min-width: 750px) {
@@ -325,8 +332,41 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 40px;
+    font-size: 0.4rem;
+  }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 40px;
+    font-size: 0.4rem;
+  }
+}
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,30 +381,60 @@ footer {
 footer a {
   text-decoration: none;
   color: #32322F;
- 
 }
 
-
-/*Single Project Page styling*/
-
-.tns-controls{
- display: flex;
- justify-content: space-between;
-
+#customize-thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-
-
-
-#customize-thumbnails  {
+ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
 }
 
-.tns-inner img{
-	width: 100%;
-
+li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
+
+/*Single Project Page styling*/
+.tns-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#customize-thumbnails {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tns-inner img {
+  width: 100%;
+  height: 400px;
+}
+
+.my-slider {
+  padding: 10%;
+}
+
+.my-slider-img {
+  width: 500px;
+  height: 500px;
+}
+/*# sourceMappingURL=style.css.map */

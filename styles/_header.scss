@@ -1,0 +1,67 @@
+.navbar{
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.nav-link:active{
+  color:#FAD502 !important;
+}
+.hero {
+   margin-top:5%;
+   background-image: url("https://www.peakoil.net/wp-content/uploads/2017/05/green-living-home-technologies.jpeg");
+   background-size: cover;
+   background-position: center;
+   height: 550px;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   border-radius: 10px;
+
+   align-items: flex-end;
+   margin-bottom: 20px;
+
+   
+   
+}
+
+.left-content{
+background-color: #fad5028c;
+   width: 500px;
+   padding: 50px;
+   border-radius: 10px;
+   margin: 10px;
+   color: white;
+   height: 235px;
+   
+}
+.right-content{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 1.5rem;
+   gap: 20px;
+}
+
+.right-content {
+   align-items: center;
+   margin: 30px;
+
+  
+
+   .fas{
+       font-size: 3rem;
+       color: white;
+       text-align: center;
+       margin: 20px;
+       
+   }
+   span{
+       border: 5px solid rgb(255, 255, 255);
+       border-radius: 5px;
+       // margin: 15px;
+       display: flex;
+       justify-content: center;
+      
+   
+   }
+}

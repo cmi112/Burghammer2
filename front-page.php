@@ -19,11 +19,15 @@ get_header(); ?>
       </div>
       <div class="col right-content">
         <span>
-          <i class="fas fa-chevron-left"></i>
+          <!-- <i class="fas fa-chevron-left"></i> -->
+          <!-- <i class="fas fa-chevron-square-right"></i> -->
+          <i class="fas fa-arrow-right"></i>
 
         </span>
         <span>
-          <i class="fas fa-chevron-right"></i>
+          <!-- <i class="fas fa-chevron-right"></i> -->
+          <!-- <i class="fas fa-chevron-circle-left"></i> -->
+          <i class="fas fa-arrow-left"></i>
 
         </span>
 
@@ -83,12 +87,18 @@ get_header(); ?>
      </div>
      <div class="action-content">
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
+         adipisci reiciendis excepturi odit delectusLorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
          adipisci reiciendis excepturi odit delectus.</p>
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
-         adipisci reiciendis excepturi odit delectus.</p>
+         adipisci reiciendis excepturi odit delectus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
+         adipisci reiciendis excepturi odit delectus</p>
 
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
-         adipisci reiciendis excepturi odit delectus.</p>
+         adipisci reiciendis excepturi odit delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
+         adipisci reiciendis excepturi odit delectus</p>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
+         adipisci reiciendis excepturi odit delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
+         adipisci reiciendis excepturi odit delectus</p>
 
      </div>
 

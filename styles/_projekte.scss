@@ -1,0 +1,49 @@
+//  Projects Pages styles
+
+.card-img-top{
+    width: 150px;
+    height: 250px;
+    border-radius: 20px!important;
+
+}
+
+.projekte-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+
+
+}
+.project-info{
+    // margin-left: 12%;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .sub-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    
+    }
+}
+.card-group{
+    width: 100%;
+}
+.card {
+    border: none !important;
+}
+
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+#mix-wrapper{
+    width: 100%;
+}

@@ -3,6 +3,8 @@
 
 
 
+
+
 	
 <div id="mix-wrapper">
 <?php while(have_posts()) : the_post(); ?>
@@ -12,34 +14,11 @@
         $categories = get_the_category();
         $slugs = wp_list_pluck($categories, 'slug');
         $class_names = join(' ', $slugs);
-        ?>
-
-
-
-    <!-- <?php if(has_post_thumbnail()):?>
-        <img src="<?php the_post_thumbnail_url("blog-large");?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
-        <?php endif;?> -->
-
-
-  
-         
-            
-       
-           
-           
-         
-          
-    
-
-      <div class="project justify-content-md-center">
-     
-
+?>
+<div class="project justify-content-md-center">
         <div class="row  p-0 p-sm-1 p-md-2 p-lg-5">
-
-          <div class="col mix-target buro" data-order="5" data-year="4">
-            
-
-              <div class="card-body">
+          <div class="card  mix-target buro" data-order="5" data-year="4">
+             <div class="card-body">
                   <h5> <?php the_title(); ?></h5>
                 <p class="card-text">
                    Ausführung: <span> <?php the_field('project_date');?></span>
@@ -51,7 +30,7 @@
                 <?php the_content(); ?>
                 </p>
                    
-                <?php
+<?php
                 // The Projects Query ARGS
                 $project=[
                     
@@ -68,7 +47,7 @@
 
                 }
 
-                ?>
+?>
  
                <!-- Tiny Sliders start -->
      
@@ -77,7 +56,7 @@ $images = get_field('project_gallery');
 if( $images ): ?>
     <div class="my-slider">
         <?php foreach( $images as $image ): ?>
-            <div>
+            <div class="my-slider-img">
                 <a href="<?php echo esc_url($image['url']); ?>">
                      <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 </a>
@@ -117,7 +96,7 @@ if( $images ): ?>
             <!-- Post content -->
         </a>
 
-  
+   
     <?php endwhile; ?>
 
 

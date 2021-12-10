@@ -50,7 +50,7 @@ function custom_theme_feature(){
 
      set_post_thumbnail_size( 50, 50);
     // Image size for single posts
-     add_image_size( 'project-thumbnail', 300, 200 );
+     add_image_size( 'project-thumbnail', 300, 300 );
 
 }
 add_action('after_setup_theme','custom_theme_feature');
@@ -122,6 +122,71 @@ add_action('init', 'wporg_custom_post_type');
 
 // Custom Post Type End
 
+
+
+
+// Custom Post Type Jobs Start
+function wporg_custom_post_type_jobs() {
+
+  register_post_type('jobs',
+
+  array(
+      'labels'      => array(
+          'name'          => __('Jobs'),
+          'singular_name' => __('Job'),
+      ),
+      
+      'public'      => true,
+      'has_archive' => true,
+      'menu_icon' =>'dashicons-chart-bar',
+      'supports' => array('title','editor','excerpt','thumbnail','revisions')
+     
+        
+  )
+  
+);
+
+// categories
+register_taxonomy(
+  'job_categories',
+  'jobs',
+  array(
+    'label'        => __( 'Categories' ),
+    'rewrite'      => false,
+    'hierarchical' => true,
+    'capabilities' => array( 'edit_terms' => 'manage_categories' ),
+    'all_items'=>'Categories',
+    'query_var'=>true,
+    'rewrite'=>array('slug'=>'job_categories')
+  )
+);
+
+// tags
+register_taxonomy(
+  'project_tags',
+  'jobs',
+  array(
+    'label'        => __( 'Tags' ),
+    'rewrite'      => false,
+    'hierarchical' => false,
+    'capabilities' => array( 'edit_terms' => 'manage_categories' )
+  )
+);
+
+
+
+
+
+
+}
+add_action('init', 'wporg_custom_post_type_jobs');
+
+
+
+
+
+
+// Custom Post type jobs End
 
 
 

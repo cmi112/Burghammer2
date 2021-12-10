@@ -1,0 +1,151 @@
+
+/* MEDIA QUERIES STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (min-width: 750px) {
+
+    .col {
+        display: flex;
+        flex-direction: column;
+
+     
+    }
+  
+  
+  
+   
+  
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .row {
+       
+
+       display: flex;
+       flex-direction: column;
+    }
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-top: 40px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+    }
+
+.left-content{
+    background-color: #fad5028c;
+       width: 450px;
+       padding: 50px;
+       border-radius: 10px;
+       margin: 10px;
+       color: white;
+       height: 250px;
+       
+    }
+    .right-content{
+       display: flex;
+      
+      
+       
+    }
+    .action-container{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 100%;
+       
+      
+        font-family:  sans-serif;
+       
+        .action-btn {
+            display: flex;
+            justify-content: space-around;
+            
+            align-items: center;
+            // margin: 10px;
+            border-radius: 10px;
+            background-color:#FAD502;
+           
+            size: 45px;
+            padding: 10px;
+        }
+    
+    }
+  
+
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//     .col {
+//         color: red;
+        
+      
+//      }
+//      .category {
+//         display: flex;
+     
+//     }
+  
+
+// } 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .category {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        font-size: 0.4rem;
+    }
+
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    .category {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        font-size: 0.4rem;
+    }
+
+
+ } 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .category {
+        display: flex;
+        margin-top: 40px;
+
+    }
+}
+  
+  
+  
+//     .category {
+//       margin-bottom: 0;
+//     }
+  
+//     .category button {
+//       width: 25%;
+//       margin-bottom: 15px;
+//     }
+  
+//     .courses  {
+//       width: 21%;
+//     }
+  
+//   }
