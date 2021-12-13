@@ -1,7 +1,11 @@
 <?php
 get_header();
 ?>
+
 <div id="filter-wrapper">
+    <h1>Unsere Projekte</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, facere ipsum dolor sit amet consectetur adipisicing elit. Architecto, facere?</p>
+    <h1>Projekte Filtern:</h1>
     <?php
     $terms = get_terms( array( 'taxonomy' => 'project_categories' ) );
     $terms=get_terms('project_categories');
@@ -33,7 +37,7 @@ get_header();
         <div class="col mix <?php echo $termsSlug;?>">
             <div class="card mb-3" >
                 <div class="card-body"> 
-                    <img class="card-img-top" src="<?php the_post_thumbnail_url();?>">
+                    <img class="card-img-top" src="<?php the_post_thumbnail_url('project-large');?>">
                     <h5 class="card-title">
                         <?php the_title();?> 
                     </h5>
@@ -46,5 +50,7 @@ get_header();
     }
     ?>
 </div>
+<?php previous_posts_link();?>
+<?php next_posts_link();?>
 
 <?php get_footer(); ?>

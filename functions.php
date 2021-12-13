@@ -50,7 +50,8 @@ function custom_theme_feature(){
 
      set_post_thumbnail_size( 50, 50);
     // Image size for single posts
-     add_image_size( 'project-thumbnail', 300, 300 );
+    add_image_size( 'project-large', 800, 400,true );
+    add_image_size( 'project-thumbnail', 300, 200,true);
 
 }
 add_action('after_setup_theme','custom_theme_feature');

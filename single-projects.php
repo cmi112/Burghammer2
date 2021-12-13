@@ -19,7 +19,7 @@
         <div class="row  p-0 p-sm-1 p-md-2 p-lg-5">
           <div class="card  mix-target buro" data-order="5" data-year="4">
              <div class="card-body">
-                  <h5> <?php the_title(); ?></h5>
+                  <h2> <?php the_title(); ?></h2>
                 <p class="card-text">
                    Ausführung: <span> <?php the_field('project_date');?></span>
                    Auftraggeber: <span> <?php the_field('project_client');?> </span>
@@ -58,7 +58,7 @@ if( $images ): ?>
         <?php foreach( $images as $image ): ?>
             <div class="my-slider-img">
                 <a href="<?php echo esc_url($image['url']); ?>">
-                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                     <img src="<?php echo esc_url($image['sizes']['project-large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 </a>
                 <p><?php echo esc_html($image['caption']); ?></p>
             </div>

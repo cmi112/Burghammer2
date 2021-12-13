@@ -17,7 +17,7 @@ get_header();
         <div class="col mix <?php echo $termsSlug;?>">
             <div class="card mb-3" >
                 <div class="card-body"> 
-                    <img class="card-img-top" src="<?php the_post_thumbnail_url();?>">
+                    <img class="card-img-top" src="<?php the_post_thumbnail_url('project-large');?>">
                     <h5 class="card-title">
                         <?php the_title();?> 
                     </h5>
@@ -26,7 +26,7 @@ get_header();
                 </div>
             </div>
         </div>
-       <?php 
+       <?php  
     }
     ?>
 </div>

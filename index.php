@@ -1,4 +1,4 @@
-<div class="container">
+
 
 <?php get_header();?>
 <?php 
@@ -10,25 +10,29 @@
  */
 get_header();
 ;?>
-<div class="container">
-
-
-    <?php 
+<?php 
 // the query
 $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
  
 <?php if ( $wpb_all_query->have_posts() ) : ?>
  
-<div class="row">
- 
+<div class="container">
+<h1>All Posts </h1>
+ <div class="row">
     <!-- the loop -->
     <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-        <div class="col"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-        <?php the_content('read more...'); ?>
-    <?php endwhile; ?>
-    <!-- end of the loop -->
- 
+
+<div class="col">
+  <div class="card-body">
+  <img src="<?php the_post_thumbnail_url('project-large');?>" class="card-img-top" alt="...">
+    <h5 class="card-title"><?php the_title(); ?></h5>
+    <p class="card-text"><?php the_excerpt();?></p>
+    <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
+  </div>
 </div>
+<?php endwhile; ?>
+    <!-- end of the loop -->
+
  
     <?php wp_reset_postdata(); ?>
  
@@ -36,20 +40,5 @@ $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php get_footer();?>
 </div>
+<?php get_footer();?>

@@ -7,7 +7,11 @@
 <div class="container">
    <h1><?php the_field('position');?></h1>
   
-<div id="mix-wrapper">
+<div id="mix-wrapper" class="container">
+    <?php if (has_post_thumbnail()):?>
+        <img class="img-fluid rounded" src="<?php the_post_thumbnail_url('project-large');?>">
+
+        <?php endif;?>
    
 <?php while(have_posts()) : the_post(); ?>
 
@@ -63,6 +67,7 @@
     <a href="<?php the_permalink(); ?>" class="mix<?php if ($class_names) { echo ' ' . $class_names;} ?>">
             <!-- Post content -->
         </a>
+
 <?php endwhile; ?>
 </div>
 <?php get_footer(); ?> 

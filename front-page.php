@@ -15,7 +15,8 @@ get_header(); ?>
       <h1>Lorem ipsum dolor sit.</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minima eveniet veritatis esse laudantium?</p>
 
-        <button type="button" class="btn btn-light">Projekt ansehen</button>
+        <!-- <button type="button" class="btn btn-light">Projekt ansehen</button> -->
+        <a href="https://abdilikani.endcore.dev/projects/" class="btn btn-light" >Projekt ansehen</a>
       </div>
       <div class="col right-content">
         <span>
@@ -83,7 +84,8 @@ get_header(); ?>
    <div class="action-container">
      <div class="action-btn">
        <h3>Sie haben Lust, an spannendenn Projekten mitzuarbeiten ? </h3>
-       <button class="btn btn-light">zu unseren Jobangeboten</button>
+       <!-- <button class="btn btn-light">zu unseren Jobangeboten</button> -->
+       <a href="https://abdilikani.endcore.dev/jobs/" class="btn btn-light">Zu unseren Jobangeboten</a>
      </div>
      <div class="action-content">
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae officiis tempore nisi porro numquam
