@@ -39,7 +39,8 @@ register_nav_menus( array(
 
 //  Navbar Register End
 
-
+// Add theme support widgets
+add_theme_support('widgets');
 
 // Thumbnail for Projects Start
 
